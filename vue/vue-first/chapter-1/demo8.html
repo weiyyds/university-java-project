@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="../js/vue.min.js"></script>
+</head>
+<body>
+<div id="dd">
+   <p>currentTime1:{{currentTime1}}</p>
+    <p>currentTime2:{{currentTime2()}}</p>
+</div>
+<script>
+    var vm=new Vue({
+    el:'#dd',
+    data:{
+        message:'hello kuangshen'
+    },
+        computed: {
+            currentTime1: function () {
+                this.message;
+                return Date.now();
+            }
+        },
+    methods:{
+        currentTime2:function () {
+            return Date.now();
+        }
+
+    },
+
+    });
+</script>
+</body>
+</html>

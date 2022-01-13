@@ -1,0 +1,60 @@
+.content{
+    width: 100%;
+    height: 100%;
+}
+#login_background{
+    width: 100%;
+    height: 100%;
+    background-image: url("../img/login_background.jpg");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+#login_form{
+    width: 500px;
+    margin: -392px auto;
+    padding-bottom: 5px;
+}
+#login_form>table{
+    margin-left: 80px;
+}
+#login_form>table>tr:nth-child(1){}
+.search_tel:hover{
+    color: blue;
+    cursor: pointer;
+}
+
+#login_form>table>tr:nth-child(2){}
+.search_password:hover{
+    color: blue;
+    cursor: pointer;
+}
+
+#login_form>table>tr:nth-child(3){}
+#captcha{
+    line-height: 20px;
+}
+
+
+#login_form>p{
+    margin-left: 150px;
+}
+#login_form>p>span:hover{
+    color: mediumorchid;
+    cursor: pointer;
+}
+#login_form>button:nth-child(3){
+    background-color: green;
+    margin-left: 150px;
+    font-size: 18px;
+}
+#login_form>button:nth-child(3):hover{
+    cursor: pointer;
+}
+#login_form>button:nth-child(4){
+    background-color: pink;
+    margin-left: 30px;
+    font-size: 18px;
+}
+#login_form>button:nth-child(4):hover{
+    cursor: pointer;
+}

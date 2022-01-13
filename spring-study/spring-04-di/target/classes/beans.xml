@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+        https://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="student" class="com.kuang.pojo.Student">
+        <property name="name" value="青青"/>
+        <property name="address" ref="address"/>
+<!--        数组-->
+        <property name="books">
+            <array>
+                <value>红楼梦</value>
+                <value>西游记</value>
+                <value>水浒传</value>
+                <value>三国演义</value>
+            </array>
+        </property>
+<!--        list集合-->
+        <property name="hobby">
+            <list>
+                <value>听歌</value>
+                <value>敲代码</value>
+                <value>看电影</value>
+            </list>
+        </property>
+        <!--            map集合-->
+        <property name="card">
+            <map>
+                <entry key="身份证" value="445224200001160319"/>
+                <entry key="手机号" value="19120592113"/>
+            </map>
+        </property>
+<!-- set-->
+        <property name="games">
+            <set>
+                <value>LOL</value>
+                <value>COC</value>
+                <value>BOB</value>
+            </set>
+        </property>
+<!--        null-->
+        <property name="wife">
+            <null/>
+        </property>
+<!--     Properties   -->
+        <property name="info">
+            <props>
+                <prop key="学号">20195533408</prop>
+                <prop key="性别">男</prop>
+                <prop key="姓名">黄少伟</prop>
+            </props>
+        </property>
+    </bean>
+    <bean id="address" class="com.kuang.pojo.Address">
+        <property name="address" value="广州市增城区风光路393号"></property>
+    </bean>
+
+</beans>

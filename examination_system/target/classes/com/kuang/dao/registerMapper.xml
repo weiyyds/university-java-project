@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.kuang.dao.registerMapper">
+   <insert id="addUser" parameterType="register">
+       insert into db_exam.register (id,telNumber,password,ID_number,name,email) values (#{id},#{telNumber},#{password},#{ID_number},#{name},#{email})
+   </insert>
+</mapper>

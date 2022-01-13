@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="../js/vue.min.js"></script>
+</head>
+<body>
+<div id="dd">
+<!--    <input type="text" v-model="message">-->
+<!--    {{message}}-->
+<!--    <input type="radio" name="sex" value="男" v-model="qiangjian">男-->
+<!--    <input type="radio" name="sex" value="女" v-model="qiangjian">女-->
+<!--    <p>-->
+<!--        选中了谁{{qiangjian}}-->
+<!--    </p>-->
+
+<!--    下拉框-->
+    <select v-model="selected">
+        <option disabled value="">请选择------</option>
+        <option>A</option>
+        <option>B</option>
+        <option>C</option>
+    </select>
+    <span>value:{{selected}}</span>
+</div>
+<script>
+    var vm=new Vue({
+    el:'#dd',
+    data: {
+      // message:''
+        selected:''
+    },
+    // 事件
+        methods:{
+        sayhi:function () {
+            alert(this.message)
+            }
+        }
+    });
+</script>
+</body>
+</html>

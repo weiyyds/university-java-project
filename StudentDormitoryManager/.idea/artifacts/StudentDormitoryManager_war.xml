@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="war" build-on-make="true" name="StudentDormitoryManager:war">
+    <output-path>$PROJECT_DIR$/out/artifacts/StudentDormitoryManager_war</output-path>
+    <root id="archive" name="StudentDormitoryManager_war.war">
+      <element id="artifact" artifact-name="StudentDormitoryManager:war exploded" />
+    </root>
+  </artifact>
+</component>

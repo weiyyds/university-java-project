@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="../js/vue.min.js"></script>
+</head>
+<body>
+<div id="dd">
+   <qingjiang v-for="kuangshen in items" v-bind:qin="kuangshen"></qingjiang>
+
+</div>
+<script>
+//   定义组件
+    Vue.component('qingjiang',{
+        props:['qin'],
+        template:'<li>{{qin}}</li>'
+
+    });
+    var vm=new Vue({
+    el:'#dd',
+    data:{
+        items:['java','Linux','php']
+    }
+    });
+</script>
+</body>
+</html>

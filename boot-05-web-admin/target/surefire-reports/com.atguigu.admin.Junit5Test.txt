@@ -1,0 +1,17 @@
+-------------------------------------------------------------------------------
+Test set: com.atguigu.admin.Junit5Test
+-------------------------------------------------------------------------------
+Tests run: 6, Failures: 2, Errors: 1, Skipped: 2, Time elapsed: 0.437 s <<< FAILURE! - in com.atguigu.admin.Junit5Test
+testTimeout  Time elapsed: 0.335 s  <<< ERROR!
+java.util.concurrent.TimeoutException: testTimeout() timed out after 500 milliseconds
+
+all  Time elapsed: 0.024 s  <<< FAILURE!
+org.opentest4j.MultipleFailuresError: 
+test (1 failure)
+	org.opentest4j.AssertionFailedError: 结果不是1 ==> expected: <1> but was: <2>
+	at com.atguigu.admin.Junit5Test.all(Junit5Test.java:48)
+
+testSimpleAssertions  Time elapsed: 0.006 s  <<< FAILURE!
+org.opentest4j.AssertionFailedError: 两个对象不一样 ==> expected: <java.lang.Object@37ffe4f3> but was: <java.lang.Object@4fa0ee7e>
+	at com.atguigu.admin.Junit5Test.testSimpleAssertions(Junit5Test.java:37)
+

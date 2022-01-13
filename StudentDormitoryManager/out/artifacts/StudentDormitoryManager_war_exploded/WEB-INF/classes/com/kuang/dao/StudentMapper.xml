@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.kuang.dao.StudentMapper">
+    <insert id="addStudent" parameterType="Student">
+        INSERT INTO student VALUES (NULL,#{sno},#{sname},#{sex},#{age},#{sphone},#{course},#{dormitoryid})
+    </insert>
+    <select id="selectStudent" resultType="Student">
+        SELECT id,sno,sname,sex,age,sphone,course,dormitoryid FROM student
+    </select>
+
+    <select id="selByPage" parameterType="int" resultType="Student">
+        select * from student limit #{pageStart} , #{rows}
+    </select>
+    <select id="selCount" resultType="int">
+        select count(*) from student
+    </select>
+    <delete id="delete_student">
+        delete from student where id=#{id}
+    </delete>
+    <select id="edit_student" resultType="Student">
+        select * from student where id=#{id}
+    </select>
+    <update id="edit_studentByForm" parameterType="Student">
+        update student
+        <set>
+            <if test="sno != null">sno=#{sno},</if>
+            <if test="sname != null">sname=#{sname},</if>
+            <if test="sex != null">sex=#{sex},</if>
+            <if test="age != null">age=#{age},</if>
+            <if test="sphone != null">sphone=#{sphone},</if>
+            <if test="course != null">course=#{course},</if>
+            <if test="dormitoryid != null">dormitoryid=#{dormitoryid}</if>
+        </set>
+        where id=#{id}
+    </update>
+
+<!--    模糊查询-->
+    <select id="searchByName" resultType="Student" parameterType="Student">
+       SELECT * FROM student WHERE sname LIKE CONCAT('%',#{sname},'%')
+    </select>
+</mapper>

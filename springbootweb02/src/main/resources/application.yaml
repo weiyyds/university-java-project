@@ -1,0 +1,19 @@
+#spring:
+##  mvc:
+##    static-path-pattern: /haha/**
+#  web:
+#    resources:
+#      static-locations:classpath: /haha/
+spring:
+  web:
+    resources:
+      add-mappings: true
+  mvc:
+    hiddenmethod:
+      filter:
+        enabled: true
+    contentnegotiation:
+      favor-parameter: true
+server:
+  servlet:
+    context-path: "/word"

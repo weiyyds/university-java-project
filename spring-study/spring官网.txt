@@ -1,0 +1,5 @@
+官网：https://spring.io/projects/spring-framework#overview
+GitHub：https://github.com/spring-projects/spring-framework
+官方下载地址：https://repo.spring.io/release/org/springframework/spring/
+官方文档：https://docs.spring.io/spring-framework/docs/current/reference/html/core.html
+mybatis-spring文档：http://mybatis.org/spring/zh/transactions.html

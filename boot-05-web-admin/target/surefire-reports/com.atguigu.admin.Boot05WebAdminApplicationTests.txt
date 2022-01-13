@@ -1,0 +1,11 @@
+-------------------------------------------------------------------------------
+Test set: com.atguigu.admin.Boot05WebAdminApplicationTests
+-------------------------------------------------------------------------------
+Tests run: 3, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 27.826 s <<< FAILURE! - in com.atguigu.admin.Boot05WebAdminApplicationTests
+testRedis  Time elapsed: 13.872 s  <<< ERROR!
+org.springframework.data.redis.RedisConnectionFailureException: Unable to connect to Redis; nested exception is io.lettuce.core.RedisConnectionException: Unable to connect to 192.168.113.101:6379
+	at com.atguigu.admin.Boot05WebAdminApplicationTests.testRedis(Boot05WebAdminApplicationTests.java:46)
+Caused by: io.lettuce.core.RedisConnectionException: Unable to connect to 192.168.113.101:6379
+	at com.atguigu.admin.Boot05WebAdminApplicationTests.testRedis(Boot05WebAdminApplicationTests.java:46)
+Caused by: io.netty.channel.ConnectTimeoutException: connection timed out: /192.168.113.101:6379
+

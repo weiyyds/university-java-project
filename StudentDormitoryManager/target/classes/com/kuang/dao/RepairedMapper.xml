@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.kuang.dao.RepairedMapper">
+    <select id="select_repaired" resultType="Repaired">
+        select * from repaired
+    </select>
+    <delete id="delete_repaired">
+        delete from repaired where id=#{id}
+    </delete>
+    <insert id="addRepaired" parameterType="Repaired">
+        INSERT INTO repaired VALUES (NULL,#{dormitoryid},#{reason},#{submit_time})
+    </insert>
+    <update id="edit_repairedMessage2" parameterType="Repaired">
+        update repaired
+        <set>
+            <if test="dormitoryid != null">dormitoryid=#{dormitoryid},</if>
+            <if test="reason != null">reason=#{reason},</if>
+            <if test="submit_time != null">submit_time=#{submit_time}</if>
+        </set>
+        where id=#{id}
+    </update>
+    <select id="selByPage" parameterType="int" resultType="Repaired">
+        select * from repaired limit #{pageStart} , #{rows}
+    </select>
+    <select id="selCount" resultType="int">
+        select count(*) from repaired
+    </select>
+</mapper>

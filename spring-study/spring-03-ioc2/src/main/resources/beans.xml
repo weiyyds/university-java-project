@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+        https://www.springframework.org/schema/beans/spring-beans.xsd">
+
+   <bean id="user" class="com.kuang.pojo.User">
+       <!--使用有参构造方法进行实例化对象，使用下标的方式-->
+       <!--<constructor-arg index="0" value="狂神说java"></constructor-arg>-->
+
+       <!--通过类型type创建-->
+      <!-- <constructor-arg type="java.lang.String" value="亲家"/>-->
+
+       <constructor-arg name="name" value="sss"/>
+   </bean>
+    <bean id="userT" class="com.kuang.pojo.UserT">
+    </bean>
+<alias name="user" alias="ggg"></alias>
+</beans>

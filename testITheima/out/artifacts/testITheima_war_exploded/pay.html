@@ -1,0 +1,51 @@
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/webbase.css">
+    <link rel="stylesheet" href="css/pages-weixinpay.css">
+
+    <script src="js/jquery-3.3.1.js"></script>
+    <script src="js/include.js"></script>
+    <script src="js/vue.js"></script>
+    <script src="js/axios-0.19.0.js"></script>
+	
+	 <!-- 获取地址栏参数 -->
+    <script src="js/getParameter.js"></script>
+
+    <!-- 二维码插件 -->
+    <script type="text/javascript" src="js/qrcode.js"></script>
+    <title>微信支付</title>
+
+</head>
+<body>
+<header id="header"></header>
+<div class="container-fluid" id="app">
+    <div class="cart py-container">
+        <!--主内容-->
+        <div class="checkout py-container  pay">
+            <div class="checkout-tit">
+                <h4 class="fl tit-txt"><span class="success-icon"></span><span  class="success-info">订单提交成功，请您及时付款！订单号：56789065645</span></h4>
+                <span class="fr"><em class="sui-lead">应付金额：</em><em  class="orange money">￥17,654</em>元</span>
+                <div class="clearfix"></div>
+            </div>
+            <div class="checkout-steps">
+                <div class="fl weixin">微信支付</div>
+                <div class="fl sao">
+                    <div class="fl code">
+                        <img src="img/erweima.png" alt="">
+                    </div>
+					
+                    <div class="fl" style="background:url(./img/phone-bg.png) no-repeat;width:350px;height:400px;margin-left:40px"></div>
+                </div>
+                <div class="clearfix"></div>
+            </div>
+        </div>
+
+    </div>
+</div>
+<!--引入尾部-->
+<footer id="footer"></footer>
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>iframe测试体验页面无刷新效果</title>
+</head>
+<body>
+<div>
+    <p>请输入地址：</p>
+    <input type="text" id="url" value="https://www.baidu.com/s?ie=UTF-8&wd=%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2&tn=88093251_22_hao_pg&">
+    <input type="button" value="提交" onclick="go()">
+</div>
+    <div>
+        <iframe id="iframe1" style="width: 100%;height: 500px"></iframe>
+    </div>
+</body>
+<script>
+    function go() {
+        var url=document.getElementById("url").value;
+    document.getElementById("iframe1").src=url;
+    }
+</script>
+</html>

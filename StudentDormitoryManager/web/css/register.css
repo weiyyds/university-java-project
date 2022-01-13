@@ -1,0 +1,46 @@
+body{
+	background: url("../img/4.jpg") no-repeat;
+	background-size: 100%;
+}
+img{
+	width: 100%;
+	height: 100%;
+}
+.td{
+		display: flex;
+		flex-direction: row;
+}
+	.span{
+		display: flex;
+		flex-direction: row-reverse;
+		text-align: center;
+		width: 80px;
+	}
+	table{
+		margin-top: 5%;
+		margin-left: 40%;
+	}
+#register{
+	margin-left: 49%;
+}
+.td{
+	height:32px;
+}
+.begin{
+	color: white;
+	font-size: 20px;
+	width: 36%;
+	/*background-color: #5600ff8f;*/
+}
+#captcha{
+	margin-left: 20px;
+}
+.look{
+	width: 95px;
+	height: 33px;
+	display: flex;
+}
+.look>a{
+	background: #00ee00;
+	width: 300px;
+}

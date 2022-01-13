@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="../js/vue.min.js"></script>
+</head>
+<body>
+<div id="dd">
+    <button v-on:click="sayhi">click me</button>
+</div>
+<script>
+    var vm=new Vue({
+    el:'#dd',
+    data: {
+      message:'狂神说vue'
+    },
+    // 事件
+        methods:{
+        sayhi:function () {
+            alert(this.message)
+            }
+        }
+    });
+</script>
+</body>
+</html>

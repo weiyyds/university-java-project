@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style>
+			#news>ul>li{
+				list-style: none;
+				width: 180px;
+				height: 80px;
+				line-height: 20px;
+			}
+		</style>
+		<link rel="stylesheet" href="themes/default/easyui.css" />
+		<link rel="stylesheet" href="themes/icon.css" />
+		<script type="text/javascript" src="jquery.min.js"></script>
+		<script type="text/javascript" src="jquery.easyui.min.js"></script>
+		
+	</head>
+	<body>
+		<div class="easyui-layout" style="width: auto;height: 600px;">
+			<div data-options="region:'north'" style="height: 100px;">导航</div>
+			<div  data-options="region:'south'" style="height: 100px;">公司简介:刚刚创立，后面还需完善</div>
+			<div  data-options="region:'west'" style="width: 150px;">
+				<div class="easyui-accordion" style="width: 140px;height: 400px;margin-left: 5px;">
+					<div data-options="" title="标题1">
+						<a href="#" id="login" class="easyui-linkbutton" style="display: block;margin-top: 10px;margin-left: 5px;margin-right: 5px;">登录</a>
+						<a href="#" class="easyui-linkbutton" style="display: block;margin-top: 10px;margin-left: 5px;margin-right: 5px;">表单</a>
+					</div>
+					<div title="标题2" data-options="">
+						<a href="#" class="easyui-linkbutton" style="display: block;margin-top: 10px;margin-left: 5px;margin-right: 5px;">验证</a>
+						<a href="#" class="easyui-linkbutton" style="display: block;margin-top: 10px;margin-left: 5px;margin-right: 5px;">通过</a>
+					</div>
+				</div>
+			</div>
+			<div id="news"  data-options="region:'east'" style="width: 250px;">
+				<ul>
+					<li>“‘绿水青山就是金山银山’是增值的”</li>
+					<li>国家主席习近平任免驻外大使</li>
+					<li>中共成功的最重要秘诀是什么？这篇文章说清楚了</li>
+					<li>春潮涌动的人民盛会 从全国两会看“十四五”新图景</li>
+					<li>农业农村部：四川阿坝州、湖北襄阳各发生一起非洲猪瘟疫情</li>
+					<li>世界军人运动会斩获四金 乒乓名将樊振东荣立一等功</li>
+					<li>国铁集团董事长：2025年高铁覆盖98%城区人口50万以上城市</li>
+					<li>CGTN：德国已经恢复播出CGTN频道</li>
+				</ul>
+			</div>
+			<div data-options="region:'center'">
+				<div id="big_tabs" class="easyui-tabs" style="width: 950px;height:400px ;">
+					<div title="用户登录"  data-options="closable:true,iconCls:'icon-man'" style="background: skyblue;">
+						<form action="#" method="get">
+						<input type="text" name="" id="" placeholder="请输入用户名" style="display: block;margin-top: 2px;margin-left: 300px;"><br />
+						<input type="password" name="" id="" placeholder="请输入密码" style="display: block;margin-top: 2px;margin-left: 300px;"><br />
+						<input type="submit" class="easyui-linkbutton" data-options="width:100" value="提交" style="display: block;margin-top: 2px;margin-left: 320px;">
+						</form>
+					</div>
+					<div title="表单" data-options="closable:true,iconCls:'icon-save'">
+						<form id="ff" method="post">
+									<div class="form-floating-label form-field" style="margin-bottom:20px">
+										<input class="easyui-textbox" name="name" style="width:100%" data-options="label:'Name:',labelPosition:'top'">
+									</div>
+									<div class="form-floating-label form-field" style="margin-bottom:20px">
+										<input class="easyui-textbox" name="email" style="width:100%" data-options="label:'Email:',labelPosition:'top',validType:'email'">
+									</div>
+									<div class="form-floating-label form-field" style="margin-bottom:20px">
+										<input class="easyui-textbox" name="subject" style="width:100%" data-options="label:'Subject:',labelPosition:'top'">
+									</div>
+									<div class="form-floating-label form-field" style="margin-bottom:20px">
+										<input class="easyui-textbox" name="message" style="width:100%;min-height:100px" data-options="label:'Message:',labelPosition:'top',multiline:true">
+									</div>
+								</form>
+								<a href="javascript:void(0)" class="easyui-linkbutton" style="width:80px">Submit</a>
+											<a href="javascript:void(0)" class="easyui-linkbutton" style="width:80px">Clear</a>
+						
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		
+		
+	</body>
+	<script type="text/javascript">
+		
+	</script>
+</html>

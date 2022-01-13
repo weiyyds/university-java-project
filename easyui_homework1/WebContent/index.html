@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>easyui日历控件</title>
+<style scoped="scoped">
+		.md{
+			height:16px;
+			line-height:16px;
+			background-position:2px center;
+			text-align:right;
+			font-weight:bold;
+			padding:0 2px;
+			color:red;
+		}
+	</style>
+<link rel="stylesheet" type="text/css" href="easyui/themes/default/easyui.css">
+<link rel="stylesheet" type="text/css" href="easyui/themes/icon.css">
+<script type="text/javascript" src="easyui/jquery.min.js"></script>
+<script type="text/javascript" src="easyui/jquery.easyui.min.js"></script>
+</head>
+<body>
+<select onchange="myFunction(this.value)">
+	<option value="0">Sunday</option>
+	<option value="1">Monday</option>
+	<option value="2">Tuesday</option>
+	<option value="3">Wednesday</option>
+	<option value="4">Thursday</option>
+	<option value="5">Friday</option>
+	<option value="6">Saturday</option>
+</select>
+
+<div id="cc" class="easyui-calendar" style="width:300px;height:300px;"  data-options="formatter:formatDay">></div>
+<script>
+function myFunction(value){
+	$('#cc').calendar({firstDay:value});
+}
+//对特殊函数打上标记
+var d1 = Math.floor((Math.random()*30)+1);
+var d2 = Math.floor((Math.random()*30)+1);
+function formatDay(date){
+	var m = date.getMonth()+1;
+	var d = date.getDate();
+	var opts = $(this).calendar('options');
+	if (opts.month == m && d == d1){
+		return '<div class="icon-ok md">' + d + '</div>';
+	} else if (opts.month == m && d == d2){
+		return '<div class="icon-search md">' + d + '</div>';
+	}
+	return d;
+}
+</script>
+</body>
+</html>

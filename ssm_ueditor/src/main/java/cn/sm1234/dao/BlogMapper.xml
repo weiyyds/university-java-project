@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cn.sm1234.dao.BlogMapper">
+    <insert id="save" parameterType="blog">
+       insert into ueditorblog.t_blog (title,author,addtime,content) values (#{title},#{author},#{addtime},#{content})
+   </insert>
+
+    <select id="findAll" resultType="blog">
+        select * from ueditorblog.t_blog
+    </select>
+
+    <select id="findById" resultType="blog">
+        select * from ueditorblog.t_blog where id =#{id}
+    </select>
+
+    <update id="update" parameterType="blog">
+        update ueditorblog.t_blog set title =#{title},author =#{author},addtime =#{addtime},content =#{content}
+         where id =#{id};
+    </update>
+
+
+    <delete id="delete" parameterType="int">
+        delete from ueditorblog.t_blog where id =#{id}
+    </delete>
+</mapper>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="demo.userMapper">
+    <select id="selectAllUsers" resultType="bean.user.UserBean">
+  	select * from tb_user
+  </select>
+ <insert id="insertUser" parameterType="bean.user.UserBean">
+ 	 insert into tb_user (account,pwd) values (#{account},#{pwd})
+ 	</insert>
+ <!-- 动态sql -->
+ <select id="select_if" resultType="bean.user.UserBean" parameterType="String">
+     select * from tb_user 
+     <where>
+     <if test="province!=null">
+         province = '${province}'
+     </if>
+     </where>
+ </select>
+</mapper>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet" href="./static/css/layui.css">
+ <script type="text/javascript" src="./static/layui.js"></script>
+
+</head>
+<body>
+	<form action="/help/123" method="get" class="layui-form">
+		<input type="text" name="number" placeholder="请输入账号" lay-verify="required|number"/><br/>
+		<input type="password" name="pwd" placeholder="请输入密码"/><br/>
+		<!-- 验证码 -->
+		<input type="text" name="input_code"/><img src="CpachaUtil"><br/>
+     <button type="submit" lay-submit="" class="layui-btn">提交</button>
+    </div>
+    
+	</form>
+</body>
+<script>
+ 
+</script>
+</html>

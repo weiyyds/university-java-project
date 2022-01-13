@@ -1,0 +1,25 @@
+{
+  "name": "千峰",
+  "url": "http://blog.java1234.com/index.html",
+  "page": 1,
+  "isNonProfit": true,
+  "address": {
+    "street": "含光门",
+    "city": "陕西西安",
+    "country": "中国"
+  },
+  "link": [
+    {
+      "name": "bilibili",
+      "url": "https://www.bilibili.com/"
+    },
+    {
+      "name": "千峰教育",
+      "url": "http://blog.java1234.com/index.html"
+    },
+    {
+      "name": "百度",
+      "url": "http://baidu.com/"
+    }
+  ]
+}

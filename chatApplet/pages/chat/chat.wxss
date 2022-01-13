@@ -1,0 +1,20 @@
+/* pages/chat/chat.wxss */
+.test1{
+  width: 100%;
+}
+.buttonStyle{
+  width:100% !important;
+  border: 1px solid lightgray;
+   border-radius: 2%;
+  color: rgb(59, 52, 52);
+}
+.test2{
+  width:100%;
+}
+.houduanTab_input{
+  width: 750px;
+  height: 30px;
+  border:1px solid rgb(187, 179, 179);
+  margin-top: 12px;
+  margin-bottom: 8px;
+}

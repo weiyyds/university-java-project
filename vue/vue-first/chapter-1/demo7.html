@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="../js/vue.min.js"></script>
+    <script src="../js/axios.min.js"></script>
+</head>
+<body>
+<div id="dd">
+    <div>{{info.name}}</div>
+    <div>{{info.url}}</div>
+    <div>{{info.address.street}}</div>
+    <div>{{info.link[0].name}}</div>
+<!--    <div>{{info.link[0].url}}</div>-->
+    <a v-bind:href="info.link[0].url">点击跳转</a>
+</div>
+<script>
+    var vm=new Vue({
+    el:'#dd',
+    data(){
+        return{
+            info:{
+                name:null,
+                url:null,
+                address :{
+                    street:null,
+                    city:null,
+                    country:null
+                },
+                link:[
+                    {
+                        name:null,
+                        url:null
+                    },
+                    {
+                        name:null,
+                        url:null
+                    },
+                    {
+                        name:null,
+                        url:null
+                    }
+                ]
+
+            }
+
+
+        }
+    },
+    mounted(){
+        axios.get("data.json").then(response=>(this.info=response.data));
+    }
+
+    });
+</script>
+</body>
+</html>

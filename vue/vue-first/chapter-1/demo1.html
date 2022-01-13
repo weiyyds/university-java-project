@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="../js/vue.min.js"></script>
+</head>
+<body>
+<div id="dd">
+    {{msg}}
+    <span v-bind:title="msg">鼠标停留在上面会显示动态绑定的数据</span>
+</div>
+<script>
+    var vm=new Vue({
+    el:'#dd',
+    data:{
+    msg:'hello vue'
+}
+    });
+</script>
+</body>
+</html>
